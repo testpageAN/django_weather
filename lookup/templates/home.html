@@ -10,6 +10,18 @@
             <h1>
                 Hello!!!
             </h1>
+
+            <br>
+            {% if api %}
+                {% if api == 'Error...' %}
+                    There was an error. Try again later.
+                {% else %}
+                    Air Quality: {{ api.0.AQI }}<br/>
+                    Area: {{ api.0.ReportingArea }}<br/>
+                    Category: {{ api.0.Category.Name }}<br/>
+                {% endif %}
+            {% endif %}
+
         {% endblock %}
 </body>
 </html>

@@ -1,8 +1,14 @@
 - super user:
-
+    weather
+    weather-password
 - git commands:
     $ git config --global user.name "Your Name"
     $ git config --global user.email "you@youraddress.com"
     $ git config --global push.default matching
     $ git config --global alias.co checkout
     $ git init
+- org:
+    alexis_1
+    alexis_1973
+    BCCECF5B-A827-4931-8E0D-AA3DDF3A7273
+    https://docs.airnowapi.org//account/request?userCode=BCCECF5B-A827-4931-8E0D-AA3DDF3A7273
