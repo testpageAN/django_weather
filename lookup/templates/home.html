@@ -7,18 +7,24 @@
 <body>
     {% extends "base.html" %}
         {% block content %}
-            <h1>
-                Hello!!!
-            </h1>
-
+            <br>
+            {% if zipcode %}
+                {{ zipcode }}
+            {% endif %}
             <br>
             {% if api %}
                 {% if api == 'Error...' %}
                     There was an error. Try again later.
                 {% else %}
-                    Air Quality: {{ api.0.AQI }}<br/>
-                    Area: {{ api.0.ReportingArea }}<br/>
-                    Category: {{ api.0.Category.Name }}<br/>
+                    <div class="jumbotron {{ category_color }}">
+                      <h1 class="display-4">{{ api.0.Category.Name }}</h1>
+                      <p class="lead">Current {{ api.0.ReportingArea }} Air Quality: {{ api.0.AQI }}</p>
+
+                        <p>{{ category_description }}</p>
+
+
+                    </div>
+
                 {% endif %}
             {% endif %}
 
